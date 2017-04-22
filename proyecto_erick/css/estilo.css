@@ -1,0 +1,18 @@
+body{
+   background:#F2F2F2;
+   color:#084B8A;
+   font-size:16px;
+   font-family:Arial;
+ 
+}
+#contenido{
+   background:#ff000;
+   margin:20px auto;
+   overflow:hidden;
+   padding:40px ;
+ border:1px solid #2E9AFE;
+   width:90%;
+   -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
