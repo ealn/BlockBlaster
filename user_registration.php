@@ -41,10 +41,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<a href="upload.php">Upload</a>
 				</div>	
 				<div class="signin">
-					<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Advanced Search</a>
+					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
 				</div>
 				<div class="signin">
-					<a href="logout.php" class="play-icon popup-with-zoom-anim">Logout</a>
+					<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Logout</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -56,66 +56,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="upload">
 			<!-- container -->
 			<div class="container">
-				<div class="upload-grids">
-					<div class="upload-right">
-						<div class="upload-file">
-							<div class="services-icon">
-								<span class="glyphicon glyphicon-open" aria-hidden="true"></span>
-							</div>
-							<input type="file" value="Choose file..">
-						</div>
-						<div class="upload-info">
-							<h5>Select files to upload</h5>
-							<span>or</span>
-							<p>Drag and drop files</p>
-						</div>
-					</div>
-					<div class="upload-right-bottom-grids">
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Help and Suggestions</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Import videos</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Live streaming</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
+				<form class="form-horizontal" role="form" action="create_user.php" method="post">
+  					<div class="form-group">
+    					<h3>User Registration</h3>
+    					<label class="col-lg-1 control-label">Name:</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="username" placeholder="User name">
+    					</div>
+  					</div>
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Password:</label>
+    					<div class="col-lg-5">
+      						<input type="password" class="form-control" required name="password" placeholder="Password">
+    					</div>
+  					</div>
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Repeat Password:</label>
+    					<div class="col-lg-5">
+      						<input type="password" class="form-control" required name="repeat_password" placeholder="Password">
+    					</div>
+  					</div>
+  					<div class="form-group">
+    					<div class="signin">
+      						<button type="submit" class="btn btn-info">Create</button>
+    					</div>
+  					</div>
+				</form>
 			</div>
 			<!-- //container -->
 		</div>

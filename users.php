@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<a href="upload.php">Upload</a>
 				</div>	
 				<div class="signin">
-					<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Advanced Search</a>
+					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
 				</div>
 				<div class="signin">
 					<a href="logout.php" class="play-icon popup-with-zoom-anim">Logout</a>

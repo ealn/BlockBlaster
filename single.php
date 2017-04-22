@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<a href="upload.php">Upload</a>
 				</div>	
 				<div class="signin">
-					<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Advanced Search</a>
+					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
 					<!-- pop-up-box -->
 									
 				</div>
@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				    <li><a href="history.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>History</a></li>
 					<li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Sports<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
 						<ul class="cl-effect-1">
-							<li><a href="userregistration.php">User Registration</a></li>                                             
+							<li><a href="user_registration.php">User Registration</a></li>                                             
 							<li><a href="users.php">Show Users</a></li>
 						</ul>
 						<!-- script-for-menu -->
