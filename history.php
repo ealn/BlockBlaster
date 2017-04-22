@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									
 				</div>
 				<div class="signin">
-					<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Logout</a>
+					<a href="logout.php" class="play-icon popup-with-zoom-anim">Logout</a>
 					
 				<div class="clearfix"> </div>
 			</div>
@@ -82,8 +82,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				    <li><a href="history.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>History</a></li>
 					<li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Users<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
 						<ul class="cl-effect-1">
-							<li><a href="sports.html">User Registration</a></li>                                             
-							<li><a href="sports.html">Show Users</a></li>
+							<li><a href="userregistration.php">User Registration</a></li>                                             
+							<li><a href="users.php">Show Users</a></li>
 						</ul>
 						<!-- script-for-menu -->
 						<script>
