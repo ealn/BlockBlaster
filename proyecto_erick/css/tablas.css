@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 table.display {
 	margin: 0 auto;
 	clear: both;
@@ -44,3 +45,51 @@ table.display td.center {
 	text-align: center;
 }
 
+=======
+table.display {
+	margin: 0 auto;
+	clear: both;
+	width: 90%;
+    color:#084B8A;
+}
+
+table.display thead tr{
+background-color:#e6e6e6;
+	
+}
+table.display tbody tr.color1{
+	background-color:#FFFFFF;
+}
+
+table.display tbody tr.color2{
+	background-color:#e2e4ff;
+}
+
+
+table.display thead th {
+	padding: 3px 18px 3px 10px;
+	border-bottom: 1px solid black;
+	font-weight: bold;
+	/*cursor: pointer;
+	* cursor: hand;*/
+}
+
+
+
+table.display tfoot th {
+	padding: 3px 18px 3px 10px;
+	border-top: 1px solid black;
+	font-weight: bold;
+}
+
+
+
+table.display td {
+	padding: 3px 10px;
+}
+
+table.display td.center {
+	text-align: center;
+}
+
+>>>>>>> 22adce7e1de00710e297054932abbbed77b22b2d
