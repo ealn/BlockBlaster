@@ -59,22 +59,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<form class="form-horizontal" role="form" action="advanced_search_result.php" method="post" enctype="multipart/form-data">
   					<div class="form-group">
-    					<h3>Pelicula</h3>
-
+    					<h3>Movie</h3>
               <div class="radio">
-  <label><input type="radio" name="optradio">Nombre</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">Option 2</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio" disabled>Option 3</label>
-</div>
+                <label><input type="radio" name="optradio" value="name" checked="checked">Name</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio" value="genre">Genre</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio" value="director">Director</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio" value="country">Country</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio" value="actor">Actor</label>
+              </div>
+              <br>
     					<div class="col-lg-5">
-      						<input type="text" class="form-control" required name="name" id="name" placeholder="Name">
+      						<input type="text" class="form-control" required name="fieldvalue" id="fieldvalue">
     					</div>
   					</div>
-
   					<div class="form-group">
     					<div class="signin">
       						<button type="submit" class="btn btn-info">Search</button>
