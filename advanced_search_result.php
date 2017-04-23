@@ -2,7 +2,17 @@
   $option = $_POST['optradio'];
   $value = $_POST['fieldvalue'];
 
-  //TODO
+  $numberOfElements = 4;
+  $imageArray = array("images/t1.jpg", "images/t2.jpg", "images/t3.jpg", "images/c2.jpg");
+  $directorArray = array("director1", "director2", "director3", "director4");
+  $titleArray = array("pelicula1", "pelicula2", "pelicula3", "pelicula4");
+  $idArray = array(1, 2, 3, 4);
+
+  $image ="";
+  $director = "";
+  $title ="";
+  $id = "";
+
  ?>
 
 <!DOCTYPE HTML>
@@ -68,6 +78,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					<div class="form-group">
     					<h3>Results</h3>
   					</div>
+					<div class="recommended">
+						<div class="recommended-grids">
+						<?php for($i = 0; $i < $numberOfElements; $i++) { 
+							$image = $imageArray[$i];
+							$director = $directorArray[$i];
+							$title = $titleArray[$i];
+							$id = "play.php?id=".$idArray[$i];
+						?>
+						<div class="col-md-3 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a href="<?php echo $id?>"><img src="<?php echo $image?>" alt="" /></a>
+								<div class="time small-time">
+									<p>2:34</p>
+								</div>
+							<div class="clck small-clck">
+								<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+							</div>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a href="<?php echo $id?>" class="title"><?php echo $title?></a></h5>
+								<ul>
+									<li><p class="author author-info"><a href="#" class="author"><?php echo $director?></a></p></li>
+								</ul>
+							</div>
+						</div>
+						<?php } ?>
+						<div class="clearfix"> </div>
+						</div>
+					</div>
 				</form>
 			</div>
 			<!-- //container -->
