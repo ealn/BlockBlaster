@@ -101,43 +101,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="drop-navigation drop-navigation">
 				  <ul class="nav nav-sidebar">
 					<li><a href="main.php" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-					<li><a href="#" class="menu1"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Movies<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
-						<ul class="cl-effect-2">
-							<li><a href="movies.php">English</a></li>                                             
-							<li><a href="movies.php">Chinese</a></li>
-							<li><a href="movies.php">Hindi</a></li> 
-						</ul>
-						<!-- script-for-menu -->
-						<script>
-							$( "li a.menu1" ).click(function() {
-							$( "ul.cl-effect-2" ).slideToggle( 300, function() {
-							// Animation complete.
-							});
-							});
-						</script>
-				    <li><a href="history.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>History</a></li>
-					<li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Users<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
-						<ul class="cl-effect-1">
-							<li><a href="user_registration.php">User Registration</a></li>                                             
-							<li><a href="users.php">Show Users</a></li>
-						</ul>
-						<!-- script-for-menu -->
-						<script>
-							$( "li a.menu" ).click(function() {
-							$( "ul.cl-effect-1" ).slideToggle( 300, function() {
-							// Animation complete.
-							});
-							});
-						</script>
-				  </ul>
-				  <!-- script-for-menu -->
-						<script>
-							$( ".top-navigation" ).click(function() {
-							$( ".drop-navigation" ).slideToggle( 300, function() {
-							// Animation complete.
-							});
-							});
-						</script>
+					<li><a href="movies.php" class="sub-icon"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Movies</a></li>					
+				    <li><a href="statistics.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>Statistics</a></li>
+				    <li><a href="user_registration.php" class="sub-icon"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Users</a></li>
 				</div>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
