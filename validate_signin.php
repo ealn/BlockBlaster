@@ -15,8 +15,11 @@ if($_POST['username'] && $_POST['password'])
         if (strcmp($user, $registro["NOMBRE"]) == 0
         && strcmp($pass, $registro["PASSWORD"]) == 0)
         {
+            
+            $_SESSION["usLogin"] = $tipo;              
             echo "Usuario encontrado tipo de usuario: $tipo";
             header('Location: main.php');
+            
         }
         else 
         {
