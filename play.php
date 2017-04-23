@@ -1,3 +1,39 @@
+<?php
+session_start();
+include("conexion.php");
+
+$title = "title";
+$link = "";
+$date = "";
+$resume = "";
+
+function getData()
+{
+	if ($id = $_GET['id'])
+	{
+		$linkToDataBase=MiConexion();
+		$query = mysql_query("select * from peliculas where ID_PELICULA='$id'");
+
+  		if($query)
+    	{
+        	$registro = mysql_fetch_array($query);
+        	$title = $registro["NOMBRE"];
+        	$date = $registro["YEAR"];
+        	$resume = $registro["DESCRIPCION"];
+        	$link = "https://www.youtube.com/" . $registro["LINK"];
+    	}
+   		else
+   		{
+   			echo "database select failed";
+   		}
+   	}
+   	else
+   	{
+   		echo "id not defined";
+   	}
+}
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -80,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 						</script>
 				    <li><a href="history.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>History</a></li>
-					<li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Sports<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
+					<li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Users<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
 						<ul class="cl-effect-1">
 							<li><a href="user_registration.php">User Registration</a></li>                                             
 							<li><a href="users.php">Show Users</a></li>
@@ -109,10 +145,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-sm-8 single-left">
 					<div class="song">
 						<div class="song-info">
-							<h3>Etiam molestie nisl eget consequat pharetra</h3>	
+							<?php getData(); ?>
+							<h3><?php echo $title ?></h3>	
 					</div>
 						<div class="video-grid">
-							<iframe src="https://www.youtube.com/embed/oYiT-vLjhC4" allowfullscreen></iframe>
+							<iframe src="<?php echo $link ?>" allowfullscreen></iframe>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -136,21 +173,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="load_more">	
 								<ul id="myList">
 									<li>
-										<h4>Published on 15 June 2015</h4>
-										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
-									</li>
-									<li>
-										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
-										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
-										<div class="load-grids">
-											<div class="load-grid">
-												<p>Category</p>
-											</div>
-											<div class="load-grid">
-												<a href="movies.php">Entertainment</a>
-											</div>
-											<div class="clearfix"> </div>
-										</div>
+										<h4><?php echo $date ?></h4>
+										<p><?php echo $resume ?></p>
 									</li>
 								</ul>
 							</div>
