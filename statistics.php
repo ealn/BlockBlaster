@@ -31,8 +31,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
-				<form class="navbar-form navbar-right">
-					<input type="text" class="form-control" placeholder="Search...">
+				<form class="navbar-form navbar-right" action="search.php" method="post">
+					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Search...">
 					<input type="submit" value=" ">
 				</form>
 			</div>  
@@ -42,12 +42,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 				<div class="signin">
 					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
-					<!-- pop-up-box -->
-									
 				</div>
 				<div class="signin">
 					<a href="logout.php" class="play-icon popup-with-zoom-anim">Logout</a>
-					
+				</div>
 				<div class="clearfix"> </div>
 			</div>
         </div>
