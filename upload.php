@@ -57,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- container -->
 			<div class="container">
 				
-				<form class="form-horizontal" role="form" action="guardar.php" method="post">
+				<form class="form-horizontal" role="form" action="save_movie.php" method="post">
   					<div class="form-group">
     					<h3>Add movie</h3>
     					<label class="col-lg-1 control-label">Name:</label>
@@ -127,7 +127,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					<div class="form-group">
     					<label class="col-lg-1 control-label">Genre:</label>
     					<div class="col-lg-5">
-      						<input type="text" class="form-control" required name="genero" id="genero" placeholder="Director">  <!-- TODO: change this name-->
+      						<select class="form-control" name="genero" />
+                                <option value="1">Accion</option>
+                                <option value="2">Fantasia</option>
+                                <option value="3">Horror</option>
+                                <option value="4">Mysterio</option>
+                                <option value="5">Guerra</option>
+                                <option value="6">Aventura</option>
+                                <option value="7">Sci-Fi</option>
+                                <option value="8">Thriller</option>
+                                <option value="9">Drama</option>
+                                <option value="10">Romance</option>
+                                <option value="11">Deportes</option>
+                                <option value="12">Biografia</option>
+                                <option value="13">Historia</option>
+                                <option value="14">Comedia</option>
+                                <option value="15">Crimen</option>
+                                <option value="16">Familiar</option>
+                                <option value="17">Music</option>
+                                <option value="18">Musical</option>
+                                <option value="19">Western</option>
+                                <option value="20">Animacion</option>
+                    </select>                            
     					</div>
   					</div>
 
