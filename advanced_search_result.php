@@ -1,5 +1,6 @@
 <?php 
-  $movie_name = $_POST['moviename'];
+  $option = $_POST['optradio'];
+  $value = $_POST['fieldvalue'];
 
   //TODO
  ?>
