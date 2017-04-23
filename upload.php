@@ -57,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- container -->
 			<div class="container">
 				
-				<form class="form-horizontal" role="form" action="save_movie.php" method="post">
+				<form class="form-horizontal" role="form" action="save_movie.php" method="post" enctype="multipart/form-data">
   					<div class="form-group">
     					<h3>Add movie</h3>
     					<label class="col-lg-1 control-label">Name:</label>

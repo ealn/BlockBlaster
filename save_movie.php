@@ -118,10 +118,10 @@ $ingreso = mysql_query("INSERT INTO peliculas (NOMBRE, PAIS, YEAR, DESCRIPCION, 
                         echo mysql_error().'  '.$ingreso3;
                 }
                 else
-                        echo mysql_error().'  '.$buscar_id;
+                    echo mysql_error().'  '.$buscar_id;
             }
             else
-                        echo mysql_error().'  '.$ingreso3;
+                 echo mysql_error().'  '.$ingreso3;
                     
             //Registrar Director para peliculas
             echo "***Registrando director en peliculas\n";
@@ -144,51 +144,41 @@ $ingreso = mysql_query("INSERT INTO peliculas (NOMBRE, PAIS, YEAR, DESCRIPCION, 
                         echo mysql_error().'  '.$ingreso4;
                 }
                 else
-                        echo mysql_error().'  '.$buscar_id;
+                    echo mysql_error().'  '.$buscar_id;
             }
             else
-                        echo mysql_error().'  '.$ingreso4;
-         }
-         else
-         {
-             echo mysql_error().'  '.$id;
-         }
-         
-         	if($ingreso){
-			$ruta="./images/";
+                echo mysql_error().'  '.$ingreso4;
+  
+			$ruta="images/";
 			$consulta = mysql_query("select * from peliculas WHERE NOMBRE = '$nom' ",$link);
 			$registro = mysql_fetch_array($consulta);
 			$name = $registro["ID_PELICULA"];
 			$uploadfile_temporal=$_FILES['ima']['tmp_name']; 
 			$uploadfile_nombre="$ruta$name.jpg";
-			if (is_uploaded_file($uploadfile_temporal)){ 
-    			move_uploaded_file($uploadfile_temporal,$uploadfile_nombre); 
+            echo " imagen... $uploadfile_nombre";
+			if (is_uploaded_file($uploadfile_temporal))
+            { 
+    			echo "imagen se subio....";
+                move_uploaded_file($uploadfile_temporal,$uploadfile_nombre); 
 				?>
-		    <script>
-				alert("Los datos se guardaron");
-				document.location=("ingresar_peli.php");
-			</script>
-    <?php	
-			} 
-		}else{
-	?>
-			<script>
-				alert("Error");
-				function mandar(){
-					echo "Error-> $ingreso";
-				}
-				setTimeout("mandar()",0);
-			</script>
-    <?php
-	
-	}
-
-/*
-$directorio=opendir("icon_peli/"); 
-while($ficheros=readdir($directorio)) 
-{ 
-    $url="icon_peli/".$ficheros; 
-    echo "<img src=".$url.">"; 
-} 
-*/
+                <script>
+                    alert("Los datos se guardaron");
+                    //document.location=("upload.php");
+                </script>
+                <?php
+            } 
+            else
+            {
+                ?>
+                <script>
+                    alert("Error");
+                    setTimeout("mandar()",0);
+                </script>
+                <?php
+            }
+        }
+        else
+        {
+            echo mysql_error().'  '.$id;
+        }
 ?>
