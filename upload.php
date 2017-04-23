@@ -56,66 +56,119 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="upload">
 			<!-- container -->
 			<div class="container">
-				<div class="upload-grids">
-					<div class="upload-right">
-						<div class="upload-file">
-							<div class="services-icon">
-								<span class="glyphicon glyphicon-open" aria-hidden="true"></span>
-							</div>
-							<input type="file" value="Choose file..">
-						</div>
-						<div class="upload-info">
-							<h5>Select files to upload</h5>
-							<span>or</span>
-							<p>Drag and drop files</p>
-						</div>
-					</div>
-					<div class="upload-right-bottom-grids">
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Help and Suggestions</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Import videos</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Live streaming</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
+				
+				<form class="form-horizontal" role="form" action="guardar.php" method="post">
+  					<div class="form-group">
+    					<h3>Add movie</h3>
+    					<label class="col-lg-1 control-label">Name:</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="name" id="name" placeholder="Name">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-lg-1 control-label">Country:</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="pais" id="pais" placeholder="Country">   <!-- TODO: change this name-->
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Year:</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="year" id="year" placeholder="Year">
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Time (min):</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="duracion" id="duracion" placeholder="Time">    <!-- TODO: change this name-->
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Description:</label>
+    					<div class="col-lg-5">
+    					    <textarea class="form-control" rows="10" required name="message" id="descripcion" placeholder="Description"></textarea>          <!-- TODO: change this name-->
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Video:</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="link" id="link" placeholder="Link"> 
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Image:</label>
+    					<div class="col-lg-5">
+      						<input type="file" class="form-control" required name="ima" id="ima"> 
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Director:</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="director" id="director" placeholder="Director"> 
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Actors:</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="actor1" id="actor1" placeholder="Actor #1">
+      						<input type="text" class="form-control" required name="actor2" id="actor2" placeholder="Actor #2"> 
+      						<input type="text" class="form-control" required name="actor3" id="actor3" placeholder="Actor #3">  
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Genre:</label>
+    					<div class="col-lg-5">
+      						<input type="text" class="form-control" required name="genero" id="genero" placeholder="Director">  <!-- TODO: change this name-->
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<label class="col-lg-1 control-label">Prize:</label>
+    					<div class="col-lg-5">
+      						<select class="form-control" name="premio">
+                     			<option value="1">Mejor actor</option>                      <!-- TODO: change these values-->
+                     			<option value="2">Mejor actriz</option>
+                    			<option value="3">Mejor director</option>
+                     			<option value="4">Mejor diseño de producción</option>
+                     			<option value="5">Mejor fotografía</option>
+                     			<option value="6">Mejor guion adaptado</option>
+                     			<option value="7">Mejor maquillaje y peinado</option>
+                     			<option value="8">Mejor película</option>
+                     			<option value="9">Mejor sonido</option>
+                     			<option value="10">Mejor cortometraje animado</option>
+                     			<option value="11">Mejor cortometraje de ficción</option>
+                     			<option value="12">Mejor canción original</option>
+                     			<option value="13">Mejor montaje</option>
+                     			<option value="14">Mejor actor de reparto</option>
+                     			<option value="15">Mejor actriz de reparto</option>
+                     			<option value="16">Mejor guion original</option>
+                     			<option value="17">Mejor documental</option>
+                     			<option value="18">Mejor documental largo</option>
+                     			<option value="19">Mejor diseño de vestuario</option>
+                     			<option value="20">Mejor película de habla no inglesa</option>
+                     			<option value="21">Mejor edición de sonido</option>
+                     			<option value="22">Mejor banda sonora</option>
+                 			</select>
+    					</div>
+  					</div>
+
+  					<div class="form-group">
+    					<div class="signin">
+      						<button type="submit" class="btn btn-info">Add</button>
+    					</div>
+  					</div>
+				</form>
+
+
 			</div>
 			<!-- //container -->
 		</div>
