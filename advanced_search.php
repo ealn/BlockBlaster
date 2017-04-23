@@ -60,7 +60,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<form class="form-horizontal" role="form" action="advanced_search_result.php" method="post" enctype="multipart/form-data">
   					<div class="form-group">
     					<h3>Pelicula</h3>
-    					<label class="col-lg-1 control-label">Name:</label>
+
+              <div class="radio">
+  <label><input type="radio" name="optradio">Nombre</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio">Option 2</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio" disabled>Option 3</label>
+</div>
     					<div class="col-lg-5">
       						<input type="text" class="form-control" required name="name" id="name" placeholder="Name">
     					</div>
@@ -72,8 +81,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     					</div>
   					</div>
 				</form>
-
-
 			</div>
 			<!-- //container -->
 		</div>
