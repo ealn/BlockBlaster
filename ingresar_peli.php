@@ -1,19 +1,13 @@
 <html>
 <body>
-<?php
-		include("conexion.php");
-		$link=MiConexion();	
-		@$pagi = $_GET['pagi'];
-		$contar_pagi = (strlen($pagi)); 
-		$numer_reg = 9;  
-?>
+
 <div id="body">
     <div id="content">
         <h2>Registrar Pelicula</h2>
         <p>&nbsp;</p>
         <fieldset>
             <legend>Agregar</legend>
-        <form id="ingresar" action="guardar.php" method="post" enctype="multipart/form-data">
+        <form id="ingresar" action="save_movie.php" method="post" enctype="multipart/form-data">
                 <p>
                 <p><label for="name">Nombre:</label>
                   <input name="name" id="name" value="" type="text" /></p>
@@ -23,11 +17,11 @@
                 <p>
                 <label for="year">Año:</label>
                 <input name="year" id="year" value="" type="text" />
-          </p>
-<p>
+                </p>
+                <p>
                 <label for="duracion">Duracion (min):</label>
                 <input name="duracion" id="duracion" value="" type="text" />
-          </p>
+                 </p>
                 <p>
                 <label for="message">Descripcion:</label>
                 <textarea cols="37" rows="11" name="message" id="descripcion"></textarea></p>
@@ -41,9 +35,9 @@
                     <input name="director" id="director" value="" type="text" /></p>
                 <p>
                 <p><label for="actor">Actores:</label>
-                    <input name="actor" id="actor1" value="" type="text" /></p>
-                    <input name="actor" id="actor2" value="" type="text" /></p>
-                    <input name="actor" id="actor3" value="" type="text" /></p>
+                    <input name="actor" id="actor1" value="" type="text" />
+                    <input name="actor" id="actor2" value="" type="text" />
+                    <input name="actor" id="actor3" value="" type="text" />
                 <p>
 
                 <p><label for="genero">genero:</label>
