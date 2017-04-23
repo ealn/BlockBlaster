@@ -1,12 +1,7 @@
 <?php 
+  include("conexion.php");
+  $link=MiConexion();
   $movie_name = $_POST['moviename'];
-
-  $numberOfElements = 4;
-  $imageArray = array("images/t1.jpg", "images/t2.jpg", "images/t3.jpg", "images/c2.jpg");
-  $directorArray = array("director1", "director2", "director3", "director4");
-  $titleArray = array("pelicula1", "pelicula2", "pelicula3", "pelicula4");
-  $idArray = array(1, 2, 3, 4);
-
   $image ="";
   $director = "";
   $title ="";
@@ -79,30 +74,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					</div>
 					<div class="recommended">
 						<div class="recommended-grids">
-						<?php for($i = 0; $i < $numberOfElements; $i++) { 
-							$image = $imageArray[$i];
-							$director = $directorArray[$i];
-							$title = $titleArray[$i];
-							$id = "play.php?id=".$idArray[$i];
-						?>
-						<div class="col-md-3 resent-grid recommended-grid">
-							<div class="resent-grid-img recommended-grid-img">
-								<a href="<?php echo $id?>"><img src="<?php echo $image?>" alt="" /></a>
-								<div class="time small-time">
-									<p>2:34</p>
-								</div>
-							<div class="clck small-clck">
-								<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-							</div>
-							</div>
-							<div class="resent-grid-info recommended-grid-info video-info-grid">
-								<h5><a href="<?php echo $id?>" class="title"><?php echo $title?></a></h5>
-								<ul>
-									<li><p class="author author-info"><a href="#" class="author"><?php echo $director?></a></p></li>
-								</ul>
-							</div>
-						</div>
-						<?php } ?>
+                        
+                        <?php
+                        $movie_res = mysql_query("select * from  peliculas where NOMBRE like '%$movie_name%'");
+                        if($movie_res)
+                        {
+                            $registro=mysql_fetch_assoc($movie_res);    
+                            if($registro)
+                            {
+                                do
+                                {
+                                    $image = $registro[IMG];
+                                    $title = $registro[NOMBRE];
+                                    $id = "play.php?id=".$registro[ID_PELICULA];
+                                    ?>
+                                    <div class="col-md-3 resent-grid recommended-grid">
+                                        <div class="resent-grid-img recommended-grid-img">
+                                            <a href="<?php echo $id?>"><img src="<?php echo $image?>" alt="" /></a>
+                                            <div class="time small-time">
+                                                <p>2:34</p>
+                                            </div>
+                                        <div class="clck small-clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                        </div>
+                                        </div>
+                                        <div class="resent-grid-info recommended-grid-info video-info-grid">
+                                            <h5><a href="<?php echo $id?>" class="title"><?php echo $title?></a></h5>
+                                            <ul>
+                                                <li><p class="author author-info"><a href="#" class="author"><?php echo $director?></a></p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                <?php
+                                }while($registro = mysql_fetch_assoc($movie_res)); 
+                            }
+                            else
+                            {
+                                echo "<p>No results found</p>";
+                            }
+                        }
+                        else
+                            echo mysql_error().'  '.$id;
+                        ?>
 						<div class="clearfix"> </div>
 						</div>
 					</div>
