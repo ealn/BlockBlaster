@@ -405,12 +405,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`ID`, `NOMBRE`, `PASSWORD`, `TIPO`) VALUES
-(1, 'luis', '123', 1),
-(2, 'Julio', '12345', 0),
-(3, 'Adrian', '12345', 0),
-(4, 'Carlos', '12345', 0),
-(5, 'Efrain', '12345', 0),
-(6, 'Conrado', '123', 0);
+(1, 'adrian', '12345', 1),
+(2, 'julio', '12345', 1),
+(3, 'user', '12345', 0);
 
 --
 -- Indexes for dumped tables
@@ -524,7 +521,7 @@ ALTER TABLE `premio_pelicula`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
