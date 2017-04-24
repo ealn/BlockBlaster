@@ -8,31 +8,29 @@ if($_POST['username'] && $_POST['password'] && $_POST['repeat_password'])
   $pass = $_POST['password'];
   $reppass = $_POST['repeat_password'];
 
-  //TODO
-  /*$res = mysql_query("select * from usuario where NOMBRE='$user' and PASSWORD='$pass'");
-  if($res)
-    {
-        $registro=mysql_fetch_array($res);
-        $tipo=$registro["TIPO"];
-        if (strcmp($user, $registro["NOMBRE"]) == 0
-        && strcmp($pass, $registro["PASSWORD"]) == 0)
-        {
-            echo "Usuario encontrado tipo de usuario: $tipo";
-            header('Location: main.php');
-        }
-        else 
-        {
-            ?>
-		    <script>
-				alert("Login fail");
-				document.location=("index.php");
-			</script>
-            <?php
-        }
-    }
-  else
+  if(!strcmp($pass,$reppass))
   {
-    echo mysql_error().'  '.$res; 
-  }*/
+       $new_user = mysql_query("INSERT INTO usuario (NOMBRE, PASSWORD) values('$user','$pass')"); 
+       if($new_user)
+       {
+         ?>
+        <script>
+            alert("Usuario registrado exitosamente");
+            document.location=("user_registration.php");
+        </script>
+        <?php  
+       }
+       else
+           echo mysql_error().'  '.$new_user;
+  }
+  else 
+  {
+        ?>
+        <script>
+            alert("Error, Passwords no coinciden");
+            document.location=("user_registration.php");
+        </script>
+        <?php
+  }
 }
 ?>
