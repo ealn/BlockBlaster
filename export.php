@@ -1,92 +1,112 @@
 <?php
-  session_start();
+    session_start();
   include("conexion.php");
   $link=MiConexion();
 
-  $actor_pelicula = "";
-  $director_pelicula = "";
-  $genero = "";
-  $genero_pelicula = "";
-  $pais = "";
-  $peliculas = "";
-  $personajes = "";
-  $premio = "";
-  $premio_pelicula = "";
-  $usuario = "";
-  $json = "";
-
-
+  $actor_pelicula = array();
+  $director_pelicula = array();
+  $genero = array();
+  $genero_pelicula = array();
+  $pais = array();
+  $peliculas = array();
+  $personajes = array();
+  $premio = array();
+  $premio_pelicula = array();
+  $usuario = array();
+  $json = array();
+ 
   $query = mysql_query("select * from actor_pelicula");
   if ($query)
   {
-  	 $actor_pelicula = mysql_fetch_array($query);
+     while($row=mysql_fetch_assoc($query))
+     {
+        $actor_pelicula[]=$row;
+     }
   }
 
   $query = mysql_query("select * from director_pelicula");
   if ($query)
   {
-  	 $director_pelicula = mysql_fetch_array($query);
+        while($row=mysql_fetch_assoc($query))
+        {
+            $director_pelicula[]=$row;
+        }  
   }
 
   $query = mysql_query("select * from genero");
   if ($query)
   {
-  	 $genero = mysql_fetch_array($query);
+  	 
+     while($row=mysql_fetch_assoc($query))
+        {
+            $genero[]=$row;
+        }
+     
   }
 
   $query = mysql_query("select * from genero_pelicula");
   if ($query)
   {
-  	 $genero_pelicula = mysql_fetch_array($query);
+  	 while($row=mysql_fetch_assoc($query))
+        {
+            $genero_pelicula[]=$row;
+        }
   }
 
   $query = mysql_query("select * from pais");
   if ($query)
   {
-  	 $pais = mysql_fetch_array($query);
+  	 
+     while($row=mysql_fetch_assoc($query))
+        {
+            $pais[]=$row;
+        }
   }
 
   $query = mysql_query("select * from peliculas");
   if ($query)
   {
-  	 $peliculas = mysql_fetch_array($query);
+  	 while($row=mysql_fetch_assoc($query))
+        {
+            $peliculas[]=$row;
+        }
   }
 
   $query = mysql_query("select * from personajes");
   if ($query)
   {
-  	 $personajes = mysql_fetch_array($query);
+  	 while($row=mysql_fetch_assoc($query))
+        {
+            $personajes[]=$row;
+        }
   }
 
   $query = mysql_query("select * from premio");
   if ($query)
   {
-  	 $premio = mysql_fetch_array($query);
+  	 while($row=mysql_fetch_assoc($query))
+        {
+            $premio[]=$row;
+        }
   }
 
   $query = mysql_query("select * from premio_pelicula");
   if ($query)
   {
-  	 $premio_pelicula = mysql_fetch_array($query);
+  	 while($row=mysql_fetch_assoc($query))
+        {
+            $premio_pelicula[]=$row;
+        }
   }
 
-  $query = mysql_query("select * from usuario");
+  $query= mysql_query("select * from usuario");
   if ($query)
   {
-  	 $usuario = mysql_fetch_array($query);
+  	 while($row=mysql_fetch_assoc($query))
+        {
+            $usuario[]=$row;
+        }
   }
-
-  $json_actor_pelicula    = json_encode($actor_pelicula);
-  $json_director_pelicula = json_encode($director_pelicula);
-  $json_genero            = json_encode($genero);
-  $json_genero_pelicula   = json_encode($genero_pelicula);
-  $json_pais              = json_encode($pais);
-  $json_peliculas         = json_encode($peliculas);
-  $json_personajes        = json_encode($personajes);
-  $json_premio            = json_encode($premio);
-  $json_premio_pelicula   = json_encode($premio_pelicula);
-  $json_usuario           = json_encode($usuario);
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -169,16 +189,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="main-grids news-main-grids">
 					<div class="recommended-info">
 						<h3>Exportacion de la base de datos en JSON</h3>
-						<p class="history-text"><?php echo $json_actor_pelicula;?></p>
-						<p class="history-text"><?php echo $json_director_pelicula;?></p>
-						<p class="history-text"><?php echo $json_genero;?></p>
-						<p class="history-text"><?php echo $json_genero_pelicula;?></p>
-						<p class="history-text"><?php echo $json_pais;?></p>
-						<p class="history-text"><?php echo $json_peliculas;?></p>
-						<p class="history-text"><?php echo $json_personajes;?></p>
-						<p class="history-text"><?php echo $json_premio;?></p>
-						<p class="history-text"><?php echo $json_premio_pelicula;?></p>
-						<p class="history-text"><?php echo $json_usuario;?></p>
+                        
+						<?php
+                        echo "<h4>Actor_Pelicula</h4>";
+                        echo json_encode($actor_pelicula);
+                        echo "<h4>Director_Pelicula</h4>";
+                        echo json_encode($director_pelicula);
+                        echo "<h4>Genero</h4>";
+                        echo json_encode($genero);
+                        echo "<h4>Genero_Pelicula</h4>";
+                        echo json_encode($genero_pelicula);
+                        echo "<h4>Pais</h4>";
+                        echo json_encode($pais);
+                        echo "<h4>Peliculas</h4>";
+                        echo json_encode($peliculas);
+                        echo "<h4>Personajes</h4>";
+                        echo json_encode($personajes);
+                        echo "<h4>Premio</h4>";
+                        echo json_encode($premio);
+                        echo "<h4>Premio_Pelicula</h4>";
+                        echo json_encode($premio_pelicula);
+                        echo "<h4>Usuario</h4>";
+                        echo json_encode($usuario);
+                        ?>
+                        
 					</div>
 				</div>
 			</div>
