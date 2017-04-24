@@ -1,4 +1,5 @@
 <?php 
+  session_start();
   include("conexion.php");
   $link=MiConexion();
   $movie_name = $_POST['moviename'];
@@ -48,9 +49,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</form>
 			</div>  
 			<div class="header-top-right">
+        <?php if($_SESSION["usLogin"]==1) { ?>
 				<div class="file">
 					<a href="upload.php">Upload</a>
 				</div>	
+        <?php }?>
 				<div class="signin">
 					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
 				</div>
