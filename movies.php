@@ -75,329 +75,126 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="recommended-grids english-grid">
 							<div class="recommended-info">
 								<div class="heading">
-									<h3>English</h3>
+									<h3>Drama movies</h3>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php?id=1"><img src="images/mv1.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>7:34</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=1"><img src="images/1.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=1" class="title">Birdman</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/mv2.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>9:34</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=2"><img src="images/2.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=2" class="title">12 Años de exclavitud</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/mv3.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>3:04</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=3"><img src="images/3.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=3" class="title">Argo</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/mv4.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>2:06</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=8"><img src="images/8.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=8" class="title">Sin lugar para los debiles</a></h5>
 								</div>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
 					</div>
 					<div class="recommended">
-						<div class="recommended-grids">
+						<div class="recommended-grids english-grid">
 							<div class="recommended-info">
 								<div class="heading">
-									<h3>Chinese</h3>
+									<h3>War movies</h3>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/ch1.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>2:34</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=11"><img src="images/11.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=11" class="title">El señor de los anillos</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/ch2.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>3:45</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=12"><img src="images/12.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=12" class="title">Gladiador</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/ch3.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>7:34</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=10"><img src="images/10.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=10" class="title">Alto impacto</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/ch4.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>6:30</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=14"><img src="images/14.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=14" class="title">Corazon valiente</a></h5>
 								</div>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
 					</div>
 					<div class="recommended">
-						<div class="recommended-grids">
+						<div class="recommended-grids english-grid">
 							<div class="recommended-info">
 								<div class="heading">
-									<h3>Hindi</h3>
+									<h3>Movies to enjoy</h3>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/h1.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>2:34</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=4"><img src="images/4.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=4" class="title">Discurso del rey</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/h2.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>3:45</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=5"><img src="images/5.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=5" class="title">Zona de medio</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/h3.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>7:34</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=9"><img src="images/9.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=9" class="title">Infiltrados</a></h5>
 								</div>
 							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
+							<div class="col-md-3 resent-grid recommended-grid">
 								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/h4.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>6:30</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
+									<a href="play.php?id=13"><img src="images/13.jpg" height="400" width="250" alt="" /></a>
 								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div class="recommended">
-						<div class="recommended-grids">
-							<div class="recommended-info">
-								<div class="heading">
-									<h3>Telugu</h3>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
-								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/tm1.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>5:32</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
-								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid">
-								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/tm2.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>2:34</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
-								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid movie-video-grid-left">
-								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/tm3.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>8:26</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
-								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-3 resent-grid recommended-grid movie-video-grid movie-video-grid-right">
-								<div class="resent-grid-img recommended-grid-img">
-									<a href="play.php"><img src="images/tm4.jpg" alt="" /></a>
-									<div class="time small-time show-time movie-time">
-										<p>3:44</p>
-									</div>
-									<div class="clck movie-clock">
-										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-									</div>
-								</div>
-								<div class="resent-grid-info recommended-grid-info recommended-grid-movie-info">
-									<h5><a href="play.php" class="title">Varius sit sed viverra Nullam interdum metus</a></h5>
-									<ul>
-										<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-										<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-									</ul>
+								<div class="resent-grid-info recommended-grid-info video-info-grid">
+									<h5><a href="play.php?id=13" class="title">Titanic</a></h5>
 								</div>
 							</div>
 							<div class="clearfix"> </div>
