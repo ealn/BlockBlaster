@@ -1,18 +1,102 @@
 <?php 
+  include("conexion.php");
+  $link=MiConexion();
   $option = $_POST['optradio'];
   $value = $_POST['fieldvalue'];
-
-  $numberOfElements = 4;
-  $imageArray = array("images/t1.jpg", "images/t2.jpg", "images/t3.jpg", "images/c2.jpg");
-  $directorArray = array("director1", "director2", "director3", "director4");
-  $titleArray = array("pelicula1", "pelicula2", "pelicula3", "pelicula4");
-  $idArray = array(1, 2, 3, 4);
-
   $image ="";
   $director = "";
   $title ="";
   $id = "";
-
+  $registro;
+  $trace=0;
+  if(!strcmp($option,"name"))
+  {
+        $movie_name = mysql_query("select * from  peliculas where NOMBRE like '%$value%'");
+        if($movie_name)
+        {
+            $registro=mysql_fetch_assoc($movie_name);
+        }
+        else
+        {
+            echo mysql_error().'  '.$movie_name;
+        }
+  }
+  if(!strcmp($option,"genre"))
+  {
+        $get_genre_q = mysql_query("select ID_GENERO from genero where NOMBRE like '%$value%'");
+        if($get_genre_q)
+        {
+            $get_idgenre=mysql_fetch_assoc($get_genre_q);
+            $movie_name = mysql_query("SELECT * FROM peliculas p, genero_pelicula g WHERE p.ID_PELICULA=g.ID_PELICULA AND ID_GENERO = $get_idgenre[ID_GENERO]");
+            if($movie_name)
+            {
+                $registro = mysql_fetch_assoc($movie_name);   
+            }
+            else
+            {   
+                echo mysql_error().'  '.$movie_name;
+            }                     
+        }
+        else
+        {
+            echo mysql_error().'  '.$get_genre;
+        }
+  }
+  if(!strcmp($option,"director"))
+  {
+        $get_dir_q = mysql_query("select ID from personajes where NOMBRE like '%$value%'");
+        if($get_dir_q)
+        {
+            $get_iddir=mysql_fetch_assoc($get_dir_q);
+            $movie_name = mysql_query("SELECT * FROM peliculas p, director_pelicula g WHERE p.ID_PELICULA=g.ID_PELICULA AND g.ID_PERSONAJE = $get_iddir[ID]");
+            if($movie_name)
+            {
+                $registro = mysql_fetch_assoc($movie_name);   
+            }
+            else
+            {   
+                echo mysql_error().'  '.$movie_name;
+            }                     
+        }
+        else
+        {
+            echo mysql_error().'  '.$get_dir_q;
+        }
+  }
+  if(!strcmp($option,"country"))
+  {
+        $movie_name = mysql_query("select * from  peliculas where PAIS like '%$value%'");
+        if($movie_name)
+        {
+            $registro=mysql_fetch_assoc($movie_name);
+        }
+        else
+        {
+            echo mysql_error().'  '.$movie_name;
+        }
+  }
+  if(!strcmp($option,"actor"))
+  {
+        $get_dir_q = mysql_query("select ID from personajes where NOMBRE like '%$value%'");
+        if($get_dir_q)
+        {
+            $get_iddir=mysql_fetch_assoc($get_dir_q);
+            $movie_name = mysql_query("SELECT * FROM peliculas p, actor_pelicula g WHERE p.ID_PELICULA=g.ID_PELICULA AND g.ID_PERSONAJE = $get_iddir[ID]");
+            if($movie_name)
+            {
+                $registro = mysql_fetch_assoc($movie_name);   
+            }
+            else
+            {   
+                echo mysql_error().'  '.$movie_name;
+            }                     
+        }
+        else
+        {
+            echo mysql_error().'  '.$get_dir_q;
+        }
+  }
+  
  ?>
 
 <!DOCTYPE HTML>
@@ -80,31 +164,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					</div>
 					<div class="recommended">
 						<div class="recommended-grids">
-						<?php for($i = 0; $i < $numberOfElements; $i++) { 
-							$image = $imageArray[$i];
-							$director = $directorArray[$i];
-							$title = $titleArray[$i];
-							$id = "play.php?id=".$idArray[$i];
-						?>
-						<div class="col-md-3 resent-grid recommended-grid">
-							<div class="resent-grid-img recommended-grid-img">
-								<a href="<?php echo $id?>"><img src="<?php echo $image?>" alt="" /></a>
-								<div class="time small-time">
-									<p>2:34</p>
-								</div>
-							<div class="clck small-clck">
-								<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-							</div>
-							</div>
-							<div class="resent-grid-info recommended-grid-info video-info-grid">
-								<h5><a href="<?php echo $id?>" class="title"><?php echo $title?></a></h5>
-								<ul>
-									<li><p class="author author-info"><a href="#" class="author"><?php echo $director?></a></p></li>
-								</ul>
-							</div>
-						</div>
-						<?php } ?>
-						<div class="clearfix"> </div>
+						<?php
+                        echo $trace;
+                        if($registro)
+                        {
+                            do
+                            {
+                                $image = $registro[IMG];
+                                $title = $registro[NOMBRE];
+                                $id = "play.php?id=".$registro[ID_PELICULA];
+                                ?>
+                                <div class="col-md-3 resent-grid recommended-grid">
+                                    <div class="resent-grid-img recommended-grid-img">
+                                        <a href="<?php echo $id?>"><img src="<?php echo $image?>" height="400" width="250" alt="" /></a>
+                                        <div class="time small-time">
+                                            <p>2:34</p>
+                                        </div>
+                                    <div class="clck small-clck">
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                    </div>
+                                    </div>
+                                    <div class="resent-grid-info recommended-grid-info video-info-grid">
+                                        <h5><a href="<?php echo $id?>" class="title"><?php echo $title?></a></h5>
+                                        <ul>
+                                            <li><p class="author author-info"><a href="#" class="author"><?php echo $director?></a></p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php
+                            }while($registro = mysql_fetch_assoc($movie_name)); 
+                        }
+                        else
+                        {
+                            echo "<p>No results found</p>";
+                        }
+                        ?>
 						</div>
 					</div>
 				</form>
