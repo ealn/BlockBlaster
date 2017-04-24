@@ -2,7 +2,7 @@
 include("conexion.php");
 $link=MiConexion();
 $nom=$_POST["name"];
-$pais=$$_POST["pais"];
+$pais=$_POST["pais"];
 $year=$_POST["year"];
 $duracion=$_POST["duracion"];
 $message=$_POST["message"];
@@ -11,12 +11,14 @@ $director=$_POST["director"];
 $actor1=$_POST["actor1"];
 $actor2=$_POST["actor2"];
 $actor3=$_POST["actor3"];
-//$id=$_POST["id"];
 $premio=$_POST["premio"];
 $genero=$_POST["genero"];
 $descripcion=$_POST["descripcion"];
+$ruta="images/";
+$uploadfile_temporal=$_FILES['ima']['tmp_name']; 
+$uploadfile_nombre="$ruta$nom.jpg";
 
-$ingreso = mysql_query("INSERT INTO peliculas (NOMBRE, PAIS, YEAR, DESCRIPCION, DURACION, LINK) values('$nom','$pais','$descripcion','$year','$duracion','$li')",$link);
+$ingreso = mysql_query("INSERT INTO peliculas (NOMBRE, PAIS, YEAR, DESCRIPCION, DURACION, LINK, IMG) values('$nom','$pais','$year','$descripcion','$duracion','$li','$uploadfile_nombre')",$link);
          if($ingreso)
          {
             $buscar_id=mysql_query("select ID_PELICULA from peliculas where NOMBRE='$nom' and PAIS='$pais'");
@@ -149,13 +151,7 @@ $ingreso = mysql_query("INSERT INTO peliculas (NOMBRE, PAIS, YEAR, DESCRIPCION, 
             else
                 echo mysql_error().'  '.$ingreso4;
   
-			$ruta="images/";
-			$consulta = mysql_query("select * from peliculas WHERE NOMBRE = '$nom' ",$link);
-			$registro = mysql_fetch_array($consulta);
-			$name = $registro["ID_PELICULA"];
-			$uploadfile_temporal=$_FILES['ima']['tmp_name']; 
-			$uploadfile_nombre="$ruta$name.jpg";
-            echo " imagen... $uploadfile_nombre";
+			
 			if (is_uploaded_file($uploadfile_temporal))
             { 
     			echo "imagen se subio....";
@@ -163,8 +159,8 @@ $ingreso = mysql_query("INSERT INTO peliculas (NOMBRE, PAIS, YEAR, DESCRIPCION, 
 				?>
                 <script>
                     alert("Los datos se guardaron");
-                    //document.location=("upload.php");
-                </script>
+                    document.location=("upload.php");
+                </script>   
                 <?php
             } 
             else
