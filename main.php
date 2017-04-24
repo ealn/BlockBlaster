@@ -72,6 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<?php if($_SESSION["usLogin"]==1) { ?>					
 				    <li><a href="statistics.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>Statistics</a></li>
 				    <li><a href="user_registration.php" class="sub-icon"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Users</a></li>
+				    <li><a href="export.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Export</a></li>
 				    <?php }?>
 				</div>
         </div>
