@@ -7,7 +7,7 @@
   $director_pelicula = array();
   $genero = array();
   $genero_pelicula = array();
-  $pais = array();
+  //$pais = array();
   $peliculas = array();
   $personajes = array();
   $premio = array();
@@ -53,7 +53,7 @@
         }
   }
 
-  $query = mysql_query("select * from pais");
+  /*$query = mysql_query("select * from pais");
   if ($query)
   {
   	 
@@ -61,7 +61,7 @@
         {
             $pais[]=$row;
         }
-  }
+  }*/
 
   $query = mysql_query("select * from peliculas");
   if ($query)
@@ -199,8 +199,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         echo json_encode($genero);
                         echo "<h4>Genero_Pelicula</h4>";
                         echo json_encode($genero_pelicula);
-                        echo "<h4>Pais</h4>";
-                        echo json_encode($pais);
+                        /*echo "<h4>Pais</h4>";
+                        echo json_encode($pais);*/
                         echo "<h4>Peliculas</h4>";
                         echo json_encode($peliculas);
                         echo "<h4>Personajes</h4>";
