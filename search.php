@@ -90,10 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     ?>
                                     <div class="col-md-3 resent-grid recommended-grid">
                                         <div class="resent-grid-img recommended-grid-img">
-                                            <a href="<?php echo $id?>"><img src="<?php echo $image?>" alt="" /></a>
-                                            <div class="time small-time">
-                                                <p>2:34</p>
-                                            </div>
+                                            <a href="<?php echo $id?>"><img src="<?php echo $image?>" height="400" width="250" alt="" /></a>
                                         <div class="clck small-clck">
                                             <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
                                         </div>
