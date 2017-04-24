@@ -1,5 +1,27 @@
 <?php
 session_start();
+
+$valueAction     = 1;
+$valueFantasy    = 1;
+$valueHorror     = 2;
+$valueMystery    = 5;
+$valueWar        = 6;
+$valueAventure   = 5;
+$valueSciFi      = 4;
+$valueTriller    = 4;
+$valueDrama      = 3;
+$valueRomance    = 2;
+$valueSport      = 5;
+$valueBiography  = 6;
+$valueHistory    = 8;
+$valueComedy     = 9;
+$valueCrime      = 4;
+$valueFamily     = 6;
+$valueMusic      = 3;
+$valueMusical    = 2;
+$valueWestern    = 1;
+$valueAnimation  = 2;
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,6 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
 <script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/Chart.min.js"></script>
 <!--start-smoth-scrolling-->
 </head>
   <body>
@@ -80,86 +103,87 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="main-grids news-main-grids">
 					<div class="recommended-info">
 						<h3>History Of My Play</h3>
-						<p class="history-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur, eros 
-							sed suscipit porttitor, diam felis tempus odio, eget sollicitudin purus sem sit amet dolor. Integer euismod 
-							non mauris commodo rutrum. Nulla risus felis, rhoncus vel est sed, consequat efficitur ante. Phasellus mi 
-							sapien, accumsan vitae lobortis vitae, laoreet dapibus metus. Pellentesque id ipsum vel nibh imperdiet 
-							imperdiet ac ac mauris. Suspendisse ac leo augue. Nullam venenatis massa ut pulvinar scelerisque. Duis vel 
-							vehicula urna. Quisque semper vitae lectus a feugiat. Sed dignissim egestas nunc, nec suscipit mauris 
-							interdum lobortis.
-							<span>Duis iaculis justo nec tellus bibendum rhoncus. Phasellus quis pretium leo, sed porta ligula. Mauris 
-							vitae ornare nisi, et dapibus elit. Vestibulum vel urna malesuada, bibendum orci sed, venenatis nunc. Morbi 
-							dignissim est tortor, ac aliquam augue blandit at. Pellentesque pulvinar convallis augue, in sodales risus 
-							feugiat et. Ut viverra pellentesque tellus eu consectetur. Maecenas eget massa nulla. Fusce convallis et 
-							sapien a hendrerit. Etiam viverra maximus dolor, ac tempor sapien.
-							</span>
-						</p>
-						<div class="history-grids">
-							<div class="col-md-1 history-left">
-								<p>2001</p>
-							</div>
-							<div class="col-md-11 history-right">
-								<h5>Praesent a dui sit amet turpis tempus gravida eu quis mi</h5>
-								<p>Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.
-								Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.</p>
-							</div>
-							<div class="clearfix"> </div>
+						<div>
+							<canvas id="chart1" width="100" height="20"></canvas>
+							<script>
+								var ctx = document.getElementById("chart1");
+								
+								var data = {
+								labels: ["Action",   "Fantasy",   "Horror",  "Mystery", "War", 
+										 "Aventure", "Sci-Fi",    "Triller", "Drama",   "Romance", 
+										 "Sport",    "Biography", "History", "Comedy",  "Crime", 
+										 "Family",   "Music",     "Musical", "Western", "Animation"],
+								datasets: [{ label: '# de interacciones',
+											 data: [<?php echo $valueAction    ?>,
+													<?php echo $valueFantasy   ?>,
+													<?php echo $valueHorror    ?>,
+													<?php echo $valueMystery   ?>,
+													<?php echo $valueWar       ?>,
+													<?php echo $valueAventure  ?>,
+													<?php echo $valueSciFi     ?>,
+													<?php echo $valueTriller   ?>,
+													<?php echo $valueDrama     ?>,
+													<?php echo $valueRomance   ?>,
+													<?php echo $valueSport     ?>,
+													<?php echo $valueBiography ?>,
+													<?php echo $valueHistory   ?>,
+													<?php echo $valueComedy    ?>,
+													<?php echo $valueCrime     ?>,
+													<?php echo $valueFamily    ?>,
+													<?php echo $valueMusic     ?>,
+													<?php echo $valueMusical   ?>,
+													<?php echo $valueWestern   ?>,
+													<?php echo $valueAnimation ?>],
+											 backgroundColor: [ 'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)',
+																'rgba(54, 162, 235, 0.2)'],
+											 borderColor: [ 'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)',
+															'rgba(200,200,200,1)'],
+											 borderWidth: 2}]};
+
+								var options = { scales: { yAxes: [ { ticks: { beginAtZero:true } } ] } };
+								var chart1 = new Chart(ctx, { type: 'bar',
+															  data: data,
+															  options: options});
+							</script>
 						</div>
-						<div class="history-grids">
-							<div class="col-md-1 history-left">
-								<p>2003</p>
-							</div>
-							<div class="col-md-11 history-right">
-								<h5>Duis iaculis justo nec tellus bibendum rhoncus pretium leo</h5>
-								<p>Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.
-								Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="history-grids">
-							<div class="col-md-1 history-left">
-								<p>2005</p>
-							</div>
-							<div class="col-md-11 history-right">
-								<h5>Class aptent taciti sociosqu ad litora torquent per conubia</h5>
-								<p>Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.
-								Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="history-grids">
-							<div class="col-md-1 history-left">
-								<p>2007</p>
-							</div>
-							<div class="col-md-11 history-right">
-								<h5>Integer sem sem, ornare id velit a, semper fringilla magna</h5>
-								<p>Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.
-								Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="history-grids">
-							<div class="col-md-1 history-left">
-								<p>2009</p>
-							</div>
-							<div class="col-md-11 history-right">
-								<h5>Praesent a dui sit amet turpis tempus gravida eu quis mi</h5>
-								<p>Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.
-								Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="history-grids">
-							<div class="col-md-1 history-left">
-								<p>2011</p>
-							</div>
-							<div class="col-md-11 history-right">
-								<h5>Integer sem sem, ornare id velit a, semper fringilla magna</h5>
-								<p>Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.
-								Morbi eget malesuada nunc. Nullam ac congue ipsum, non tristique orci. Sed placerat porta justo, at sollicitudin velit. Curabitur sed hendrerit justo, eu vehicula lorem.</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
+						<p class="history-text">Esta grafica representa los valores de el numero de interacciones de cada genero
+						de cada genero</p>
 					</div>
 				</div>
 			</div>
