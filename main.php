@@ -35,21 +35,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
 				<form class="navbar-form navbar-right" action="search.php" method="post">
-					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Search...">
+					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Buscar...">
 					<input type="submit" value=" ">
 				</form>
 			</div>  
 			<div class="header-top-right">
 				<?php if($_SESSION["usLogin"]==1) { ?>
 				<div class="file">
-					<a href="upload.php">Upload</a>
+					<a href="upload.php">Subir</a>
 				</div>	
 				<?php }?>
 				<div class="signin">
-					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
+					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Busqueda avanzada</a>
 				</div>
 				<div class="signin">
-					<a href="logout.php" class="play-icon popup-with-zoom-anim">Logout</a>
+					<a href="logout.php" class="play-icon popup-with-zoom-anim">Cerrar</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -67,12 +67,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 				<div class="drop-navigation drop-navigation">
 				  <ul class="nav nav-sidebar">
-					<li class="active"><a href="main.php" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-					<li><a href="movies.php" class="sub-icon"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Movies</a></li>
+					<li class="active"><a href="main.php" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Inicio</a></li>
+					<li><a href="movies.php" class="sub-icon"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Peliculas</a></li>
 					<?php if($_SESSION["usLogin"]==1) { ?>					
-				    <li><a href="statistics.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>Statistics</a></li>
-				    <li><a href="user_registration.php" class="sub-icon"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Users</a></li>
-				    <li><a href="export.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Export</a></li>
+				    <li><a href="statistics.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>Estidisticas</a></li>
+				    <li><a href="user_registration.php" class="sub-icon"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Usuarios</a></li>
+				    <li><a href="export.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Exportar</a></li>
 				    <?php }?>
 				</div>
         </div>
@@ -80,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="main-grids">
 				<div class="top-grids">
 					<div class="recommended-info">
-						<h3>Best Videos</h3>
+						<h3>Mejores videos</h3>
 					</div>
 					<div class="col-md-4 resent-grid recommended-grid slider-top-grids">
 						<div class="resent-grid-img recommended-grid-img">
@@ -96,7 +96,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h3><a href="play.php?id=1" class="title title-info">Birdman</a></h3>
 							<ul>
 								<li><p class="author author-info"><a href="#" class="author">Alejandro Iñárritu</a></p></li>
-								<li class="right-list"><p class="views views-info">30 views</p></li>
 							</ul>
 						</div>
 					</div>
@@ -114,7 +113,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h3><a href="play.php?id=9" class="title title-info">Los infiltrados</a></h3>
 							<ul>
 								<li><p class="author author-info"><a href="#" class="author">Martin Scorsese</a></p></li>
-								<li class="right-list"><p class="views views-info">22 views</p></li>
 							</ul>
 						</div>
 					</div>
@@ -132,7 +130,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h3><a href="play.php?id=14" class="title title-info">Corazon valiente</a></h3>
 							<ul>
 								<li><p class="author author-info"><a href="#" class="author">James Cameron</a></p></li>
-								<li class="right-list"><p class="views views-info">20 views</p></li>
 							</ul>
 						</div>
 					</div>
@@ -141,7 +138,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="recommended">
 					<div class="recommended-grids">
 						<div class="recommended-info">
-							<h3>Recommended</h3>
+							<h3>Recomendaciones</h3>
 						</div>
 						<div class="col-md-3 resent-grid recommended-grid">
 							<div class="resent-grid-img recommended-grid-img">

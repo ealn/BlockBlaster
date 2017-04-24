@@ -35,21 +35,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
 				<form class="navbar-form navbar-right" action="search.php" method="post">
-					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Search...">
+					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Buscar...">
 					<input type="submit" value=" ">
 				</form>
 			</div>  
 			<div class="header-top-right">
         <?php if($_SESSION["usLogin"]==1) { ?>
 				<div class="file">
-					<a href="upload.php">Upload</a>
+					<a href="upload.php">Subir</a>
 				</div>
         <?php }?>	
 				<div class="signin">
-					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
+					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Busqueda avanzada</a>
 				</div>
 				<div class="signin">
-					<a href="logout.php" class="play-icon popup-with-zoom-anim">Logout</a>
+					<a href="logout.php" class="play-icon popup-with-zoom-anim">Cerrar</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -64,38 +64,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<form class="form-horizontal" role="form" action="save_movie.php" method="post" enctype="multipart/form-data">
   					<div class="form-group">
-    					<h3>Add movie</h3>
-    					<label class="col-lg-1 control-label">Name:</label>
+    					<h3>Agregar pelicula</h3>
+    					<label class="col-lg-1 control-label">Nombre:</label>
     					<div class="col-lg-5">
-      						<input type="text" class="form-control" required name="name" id="name" placeholder="Name">
+      						<input type="text" class="form-control" required name="name" id="name" placeholder="Nombre">
     					</div>
   					</div>
 
 					<div class="form-group">
-    					<label class="col-lg-1 control-label">Country:</label>
+    					<label class="col-lg-1 control-label">Pais:</label>
     					<div class="col-lg-5">
-      						<input type="text" class="form-control" required name="pais" id="pais" placeholder="Country">   <!-- TODO: change this name-->
+      						<input type="text" class="form-control" required name="pais" id="pais" placeholder="Pais">   <!-- TODO: change this name-->
     					</div>
   					</div>
 
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Year:</label>
+    					<label class="col-lg-1 control-label">Año:</label>
     					<div class="col-lg-5">
-      						<input type="text" class="form-control" required name="year" id="year" placeholder="Year">
+      						<input type="text" class="form-control" required name="year" id="year" placeholder="Año">
     					</div>
   					</div>
 
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Time (min):</label>
+    					<label class="col-lg-1 control-label">Tiempo (min):</label>
     					<div class="col-lg-5">
-      						<input type="text" class="form-control" required name="duracion" id="duracion" placeholder="Time">    <!-- TODO: change this name-->
+      						<input type="text" class="form-control" required name="duracion" id="duracion" placeholder="Tiempo">    <!-- TODO: change this name-->
     					</div>
   					</div>
 
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Description:</label>
+    					<label class="col-lg-1 control-label">Descripcion:</label>
     					<div class="col-lg-5">
-    					    <textarea class="form-control" rows="10" required name="message" id="descripcion" placeholder="Description"></textarea>          <!-- TODO: change this name-->
+    					    <textarea class="form-control" rows="10" required name="message" id="descripcion" placeholder="Descripcion"></textarea>          <!-- TODO: change this name-->
     					</div>
   					</div>
 
@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					</div>
 
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Image:</label>
+    					<label class="col-lg-1 control-label">Imagen:</label>
     					<div class="col-lg-5">
       						<input type="file" class="form-control" required name="ima" id="ima"> 
     					</div>
@@ -121,7 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					</div>
 
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Actors:</label>
+    					<label class="col-lg-1 control-label">Actores:</label>
     					<div class="col-lg-5">
       						<input type="text" class="form-control" required name="actor1" id="actor1" placeholder="Actor #1">
       						<input type="text" class="form-control" required name="actor2" id="actor2" placeholder="Actor #2"> 
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					</div>
 
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Genre:</label>
+    					<label class="col-lg-1 control-label">Genero:</label>
     					<div class="col-lg-5">
       						<select class="form-control" name="genero" />
                                 <option value="1">Accion</option>
@@ -158,7 +158,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					</div>
 
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Prize:</label>
+    					<label class="col-lg-1 control-label">Premio:</label>
     					<div class="col-lg-5">
       						<select class="form-control" name="premio">
                      			<option value="1">Mejor actor</option>                      <!-- TODO: change these values-->
@@ -189,7 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
   					<div class="form-group">
     					<div class="signin">
-      						<button type="submit" class="btn btn-info">Add</button>
+      						<button type="submit" class="btn btn-info">Agregar</button>
     					</div>
   					</div>
 				</form>

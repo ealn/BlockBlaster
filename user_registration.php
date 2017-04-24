@@ -34,22 +34,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
-				<form class="navbar-form navbar-right">
-					<input type="text" class="form-control" placeholder="Search...">
+				<form class="navbar-form navbar-right" action="search.php" method="post">
+					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Buscar...">
 					<input type="submit" value=" ">
 				</form>
 			</div>  
 			<div class="header-top-right">
         <?php if($_SESSION["usLogin"]==1) { ?>
 				<div class="file">
-					<a href="upload.php">Upload</a>
+					<a href="upload.php">Subir</a>
 				</div>	
         <?php }?>
 				<div class="signin">
-					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
+					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Busqueda avanzada</a>
 				</div>
 				<div class="signin">
-					<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Logout</a>
+					<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Cerrar</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -63,27 +63,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<form class="form-horizontal" role="form" action="create_user.php" method="post">
   					<div class="form-group">
-    					<h3>User Registration</h3>
-    					<label class="col-lg-1 control-label">Name:</label>
+    					<h3>Registrar nuevo usuario</h3>
+    					<label class="col-lg-1 control-label">Nombre:</label>
     					<div class="col-lg-5">
-      						<input type="text" class="form-control" required name="username" placeholder="User name">
+      						<input type="text" class="form-control" required name="username" placeholder="Nombre de usuario">
     					</div>
   					</div>
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Password:</label>
+    					<label class="col-lg-1 control-label">Contraseña:</label>
     					<div class="col-lg-5">
-      						<input type="password" class="form-control" required name="password" placeholder="Password">
+      						<input type="password" class="form-control" required name="password" placeholder="Contraseña">
     					</div>
   					</div>
   					<div class="form-group">
-    					<label class="col-lg-1 control-label">Repeat Password:</label>
+    					<label class="col-lg-1 control-label">Repite contraseña:</label>
     					<div class="col-lg-5">
-      						<input type="password" class="form-control" required name="repeat_password" placeholder="Password">
+      						<input type="password" class="form-control" required name="repeat_password" placeholder="Contraseña">
     					</div>
   					</div>
   					<div class="form-group">
     					<div class="signin">
-      						<button type="submit" class="btn btn-info">Create</button>
+      						<button type="submit" class="btn btn-info">Crear</button>
     					</div>
   					</div>
 				</form>

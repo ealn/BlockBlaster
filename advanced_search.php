@@ -35,21 +35,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
 				<form class="navbar-form navbar-right" action="search.php" method="post">
-					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Search...">
+					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Buscar...">
 					<input type="submit" value=" ">
 				</form>
 			</div>  
 			<div class="header-top-right">
         <?php if($_SESSION["usLogin"]==1) { ?>
 				<div class="file">
-					<a href="upload.php">Upload</a>
+					<a href="upload.php">Subir</a>
 				</div>
         <?php }?>	
 				<div class="signin">
-					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
+					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Busqueda avanzada</a>
 				</div>
 				<div class="signin">
-					<a href="logout.php" class="play-icon popup-with-zoom-anim">Logout</a>
+					<a href="logout.php" class="play-icon popup-with-zoom-anim">Cerrar</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -64,18 +64,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<form class="form-horizontal" role="form" action="advanced_search_result.php" method="post" enctype="multipart/form-data">
   					<div class="form-group">
-    					<h3>Movie</h3>
+    					<h3>Pelicula</h3>
               <div class="radio">
-                <label><input type="radio" name="optradio" value="name" checked="checked">Name</label>
+                <label><input type="radio" name="optradio" value="name" checked="checked">Nombre</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio" value="genre">Genre</label>
+                <label><input type="radio" name="optradio" value="genre">Genero</label>
               </div>
               <div class="radio">
                 <label><input type="radio" name="optradio" value="director">Director</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio" value="country">Country</label>
+                <label><input type="radio" name="optradio" value="country">Pais</label>
               </div>
               <div class="radio">
                 <label><input type="radio" name="optradio" value="actor">Actor</label>
@@ -87,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					</div>
   					<div class="form-group">
     					<div class="signin">
-      						<button type="submit" class="btn btn-info">Search</button>
+      						<button type="submit" class="btn btn-info">Buscar</button>
     					</div>
   					</div>
 				</form>

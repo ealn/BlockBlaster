@@ -22,9 +22,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <div class="login">
 	<h1>BlockBlaster</h1>
     <form action="validate_signin.php" method="post">
-    	<input type="text" required name="username" id="username" placeholder="Username" required="required" />
-        <input type="password" required name="password" id="password" placeholder="Password" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    	<input type="text" required name="username" id="username" placeholder="Nombre de usuario" required="required" />
+        <input type="password" required name="password" id="password" placeholder="Contraseña" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Dejame entrar</button>
     </form>
   </div>
     <script src="js/index.js"></script>

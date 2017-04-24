@@ -17,8 +17,11 @@ if($_POST['username'] && $_POST['password'])
         {
             
             $_SESSION["usLogin"] = $tipo;              
-            echo "Usuario encontrado tipo de usuario: $tipo";
-            header('Location: main.php');
+            ?>
+            <script>
+            document.location=("main.php");
+            </script>
+            <?php
             
         }
         else 

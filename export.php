@@ -123,21 +123,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
 				<form class="navbar-form navbar-right" action="search.php" method="post">
-					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Search...">
+					<input type="text" class="form-control" required name="moviename" id="moviename" placeholder="Buscar...">
 					<input type="submit" value=" ">
 				</form>
 			</div>  
 			<div class="header-top-right">
 				<?php if($_SESSION["usLogin"]==1) { ?>
 				<div class="file">
-					<a href="upload.php">Upload</a>
+					<a href="upload.php">Subir</a>
 				</div>	
 				<?php }?>
 				<div class="signin">
-					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Advanced Search</a>
+					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Busqueda avanzada</a>
 				</div>
 				<div class="signin">
-					<a href="logout.php" class="play-icon popup-with-zoom-anim">Logout</a>
+					<a href="logout.php" class="play-icon popup-with-zoom-anim">Cerrar</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -155,12 +155,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 				<div class="drop-navigation drop-navigation">
 				  <ul class="nav nav-sidebar">
-					<li><a href="main.php" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-					<li><a href="movies.php" class="sub-icon"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Movies</a></li>
+					<li><a href="main.php" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Inicio</a></li>
+					<li><a href="movies.php" class="sub-icon"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Peliculas</a></li>
 					<?php if($_SESSION["usLogin"]==1) { ?>					
-				    <li><a href="statistics.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>Statistics</a></li>
-				    <li><a href="user_registration.php" class="sub-icon"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Users</a></li>
-				    <li class="active"><a href="export.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Export</a></li>
+				    <li><a href="statistics.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>Estadisticas</a></li>
+				    <li><a href="user_registration.php" class="sub-icon"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Usuarios</a></li>
+				    <li class="active"><a href="export.php" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Exportar</a></li>
 				    <?php }?>
 				</div>
         </div>
@@ -168,7 +168,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="show-top-grids">
 				<div class="main-grids news-main-grids">
 					<div class="recommended-info">
-						<h3>Export database in JSON</h3>
+						<h3>Exportacion de la base de datos en JSON</h3>
 						<p class="history-text"><?php echo $json_actor_pelicula;?></p>
 						<p class="history-text"><?php echo $json_director_pelicula;?></p>
 						<p class="history-text"><?php echo $json_genero;?></p>
