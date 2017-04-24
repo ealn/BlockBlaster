@@ -1,26 +1,58 @@
 <?php
 session_start();
+include("conexion.php");
+MiConexion();
 
-$valueAction     = 1;
-$valueFantasy    = 1;
-$valueHorror     = 2;
-$valueMystery    = 5;
-$valueWar        = 6;
-$valueAventure   = 5;
-$valueSciFi      = 4;
-$valueTriller    = 4;
-$valueDrama      = 3;
-$valueRomance    = 2;
-$valueSport      = 5;
-$valueBiography  = 6;
-$valueHistory    = 8;
-$valueComedy     = 9;
-$valueCrime      = 4;
-$valueFamily     = 6;
-$valueMusic      = 3;
-$valueMusical    = 2;
-$valueWestern    = 1;
-$valueAnimation  = 2;
+$values_array;
+
+$seen_q=mysql_query("select VISTO from genero");
+if($seen_q)
+{
+    $seen=mysql_fetch_array($seen_q);    
+    $valueAction     =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueFantasy    =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueHorror     =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueMystery    =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueWar        =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueAventure   =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueSciFi      =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueTriller    =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueDrama      =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueRomance    =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueSport      =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueBiography  =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueHistory    =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueComedy     =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueCrime      =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueFamily     =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueMusic      =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueMusical    =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueWestern    =$seen[VISTO];
+    $seen=mysql_fetch_array($seen_q);
+    $valueAnimation  =$seen[VISTO];
+        
+}
+else
+    echo mysql_error().' '.$seen_q;
+
 
 ?>
 <!DOCTYPE HTML>

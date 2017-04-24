@@ -10,20 +10,16 @@ $genre= "";
 $dir= "";
 $actors;
 $award;
-$trace=0;
-
+$seen=0;
 if ($id = $_GET['id'])
 {
     $linkToDataBase=MiConexion();
     $query = mysql_query("select * from peliculas where ID_PELICULA='$id'");
-    $trace=1;
     if($query)
     {
-        $trace=2;
         $genre_q = mysql_query("select ID_GENERO from genero_pelicula where ID_PELICULA = '$id'");
         if($genre_q)
         {
-            $trace=3;
             $reg_gen=mysql_fetch_array($genre_q);
             $get_genre_q=mysql_query("select NOMBRE from genero where ID_GENERO = '$reg_gen[ID_GENERO]'");
             if($get_genre_q)
@@ -33,6 +29,19 @@ if ($id = $_GET['id'])
             }
             else
                 echo mysql_error().'  '.$ger_genre_q;
+            
+            
+            $gen_seen_q=mysql_query("select VISTO from genero where ID_GENERO='$reg_gen[ID_GENERO]'");
+            if($gen_seen_q)
+            {
+                $seen_reg=mysql_fetch_array($gen_seen_q);
+                $seen=$seen_reg[VISTO];
+                $seen++;
+                $update_seen_q=mysql_query("UPDATE genero SET VISTO = '$seen' WHERE ID_GENERO = '$reg_gen[ID_GENERO]'");
+                
+            }
+            else
+                echo mysql_error().' '.$gen_seen_q;
                 
         }
         else
