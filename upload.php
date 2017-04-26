@@ -95,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   					<div class="form-group">
     					<label class="col-lg-1 control-label">Descripcion:</label>
     					<div class="col-lg-5">
-    					    <textarea class="form-control" rows="10" required name="message" id="descripcion" placeholder="Descripcion"></textarea>          <!-- TODO: change this name-->
+    					    <textarea class="form-control" rows="10" required name="descripcion" id="descripcion" placeholder="Descripcion"></textarea>          <!-- TODO: change this name-->
     					</div>
   					</div>
 
