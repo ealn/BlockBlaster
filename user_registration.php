@@ -49,7 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<a href="advanced_search.php" class="play-icon popup-with-zoom-anim">Busqueda avanzada</a>
 				</div>
 				<div class="signin">
-					<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Cerrar</a>
+					<a href="logout.php" class="play-icon popup-with-zoom-anim">Cerrar</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
